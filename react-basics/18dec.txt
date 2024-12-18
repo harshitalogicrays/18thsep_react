@@ -1,3 +1,36 @@
 git init 
 git add --all or git add .
 git add filename
+git commit -m "msg"
+git branch -M main
+git remote add o url 
+git push 
+
+git add 
+git commit 
+git push 
+
+
+rafc 
+rcc 
+
+===============================================
+
+props  - (properties)
+
+<p id="para" class="abc" style="" align="center"></p>
+
+<Comp username="happy" address="pune"></Comp>
+
+jsx comment - 
+ {/*     */}
+ ===================================================================
+
+ props 
+ children props 
+ destructuring assignment 
+ default props 
+ event - onclick , eventHandler 
+ Fragment 
+ ==========================
+ state 
