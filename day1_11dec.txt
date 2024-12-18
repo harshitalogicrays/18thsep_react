@@ -1,0 +1,53 @@
+javascript 
+What is reactjs - frontend javascript library for building UI. 
+library  -  collection of functions (jQuery , reactjs)
+framework - (Angular, springboot,spring MVC,laravel )
+            collection of libraries 
+
+framework -> academy -> 
+reactjs features  -
+1. SPA (single page application)
+        jQuery + AJAX => SPA 
+A single-page application (SPA) is a website that loads a single HTML page and updates it dynamically as users interact with it
+index.html 
+2. component based architecture 
+class or function => html and javascript 
+reusable code 
+instagram -> like -> post, stories, reels, msgs etc. 
+            search -> msgs, post etc. 
+
+   class or function => like and search 
+   .js or .jsx 
+
+HTML ---> javascript
+javascript ===> html + js (JSX)
+
+component returns JSX
+jsx -  javascript extension (HTML + javascript) (JS + XML)
+
+function fun(){ return "hello"}
+fun()
+
+function Fun(){
+    return <h1>Hello</h1>
+}
+<Fun></Fun> or <Fun/>
+
+Rule -
+a. html tags should be in small letters 
+b. component pascal case  (firstletter capital)
+
+3. virtual DOM  - (react fiber)
+virtual DOM is the copy of real DOM  
+4. JSX 
+
+facebook developer - introduced reactjs 
+instagram 
+
+ES6 features
+nodejs install 
+
+npx create-react-app appname
+
+npm i create-react-app 
+create-react-app appname
