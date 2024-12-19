@@ -1,6 +1,8 @@
 import './App.css';
 import Firstclasscomp from './components/firstclasscomp';
 import Firstfuncomp from './components/Firstfuncomp';
+import ConditionalRendering from './components/FunctionalComp/ConditionalRendering';
+import Propsdemo1 from './components/FunctionalComp/Propsdemo1';
 import Propsdemoinfun from './components/FunctionalComp/Propsdemoinfun';
 
 function App() {
@@ -14,8 +16,18 @@ function App() {
       <Firstfuncomp></Firstfuncomp>
       <Firstfuncomp/>
       <Firstclasscomp/> */}
+{/* <Propsdemoinfun username="Happy" address="Pune"/> */}
 
-      <Propsdemoinfun username="Happy" address="Pune"/>
+    <Propsdemo1  mobileno={9999999} isMarried={true}/>
+
+    <Propsdemo1 username='HAppy' mobileno={9999999} isMarried={true}>
+      <h1>Heading tag1</h1>
+      <h2>Heading tag2</h2>
+      <ConditionalRendering username="Happy"  isMarried={true}/> 
+    </Propsdemo1>
+
+    <br/>
+    {/* <ConditionalRendering username="Happy"  isMarried={true}/> */}
     </div>
   );
 }

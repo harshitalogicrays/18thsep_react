@@ -1,0 +1,41 @@
+ props 
+ children props 
+ destructuring assignment 
+ default props 
+ 
+
+
+simple if  - if(){true block}
+
+if else -> if(){}
+            else{}
+
+conditional Rendering - 
+1. ternary operator  - ?: (if else)
+{condition ? jsx /string : jsx/string}
+
+2. short circuit operator -  && (Simple if`)
+{condition && jsx/string}
+
+
+<div>
+    <h1 className="abnc">hello</h1>
+</div>
+
+React.createElement("div",null,
+React.createElement("h1",{classNAme:"abnc"},'hello'))
+
+Babel -> JSX to react format conversion 
+
+Babel is a JavaScript compiler that's used in React to translate modern JavaScript features into versions that older browsers can interpret: 
+
+
+children prop  - 
+    <Propsdemo1 username='HAppy' mobileno={9999999} isMarried={true}>
+      <h1>Heading tag</h1> //children prop
+    </Propsdemo1>
+
+    =====================================
+    event - onclick , eventHandler 
+    Fragment
+    state 

@@ -25,12 +25,3 @@ props  - (properties)
 jsx comment - 
  {/*     */}
  ===================================================================
-
- props 
- children props 
- destructuring assignment 
- default props 
- event - onclick , eventHandler 
- Fragment 
- ==========================
- state 
