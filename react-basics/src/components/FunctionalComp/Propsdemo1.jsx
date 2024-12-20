@@ -10,16 +10,16 @@ const Propsdemo1 = (props) => {
 export default Propsdemo1 */
 
 
-import React from 'react'
+import React, { Fragment } from 'react'
 const Propsdemo1 = ({mobileno,username="Ram",isMarried,children}) => { //defaultProp
   return (
-    <div>
+    <Fragment>
         <h1>PRops Demo</h1>
       <h3>{mobileno}</h3>
       <h4>{username}</h4>
       {/* {children} */}
       {children?.[1]}
-    </div>
+    </Fragment>
   )
 }
 export default Propsdemo1

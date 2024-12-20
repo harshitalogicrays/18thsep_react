@@ -1,0 +1,31 @@
+{condition && block}
+if condition is true then block will be executed 
+
+{condition || block}
+if condition false then block will be executed
+
+====================================================
+
+Fragment - wrapper 
+1. <React.Fragment></React.Fragment>
+
+2. import Fragment from 'react'
+<Fragment></Fragment>
+
+3. <></> (shorthand syntax of Fragment)
+
+=================================================
+
+event - onclick , eventHandler 
+    
+state -
+functional component  -
+Hooks - 
+useState() - variable 
+useRef()
+useContext()
+useCallback 
+useMemo 
+etc. 
+
+state is private/local (accessible in the component only)

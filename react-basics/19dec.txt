@@ -36,6 +36,4 @@ children prop  -
     </Propsdemo1>
 
     =====================================
-    event - onclick , eventHandler 
-    Fragment
-    state 
+  
