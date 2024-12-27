@@ -1,19 +1,28 @@
-import './App.css';
+
 import Firstclasscomp from './components/firstclasscomp';
 import Firstfuncomp from './components/Firstfuncomp';
 import ConditionalRendering from './components/FunctionalComp/ConditionalRendering';
 import CounterApp from './components/FunctionalComp/CounterApp';
+import CSSStyles from './components/FunctionalComp/CSSStyles';
 import Eventdemoinfun from './components/FunctionalComp/Eventdemoinfun';
 import Propsdemo1 from './components/FunctionalComp/Propsdemo1';
 import Propsdemoinfun from './components/FunctionalComp/Propsdemoinfun';
+import Statedemo from './components/FunctionalComp/Statedemo';
+import StateDemo2 from './components/FunctionalComp/StateDemo2';
 
+import './App.css';
+import cssmodule from './app.module.css'
+import ListRendering from './components/FunctionalComp/ListRendering';
+import Image1 from './assets/images/a.jpg'
 function App() {
   let name = "Happy"
 
   return (
     <div className="container">
-      <h1 className="text-primary">Hello React</h1>
-      {/* <h2>Welcome to LRA</h2>
+      <h1 className="success">Hello React</h1>
+      <h2 className={cssmodule.error}>Welcome to LRA</h2>
+      <img src={Image1} style={{height:'200px',width:'200px'}}/>
+      {/*
       <h2>Name = {name} </h2>
       <Firstfuncomp></Firstfuncomp>
       <Firstfuncomp/>
@@ -33,7 +42,12 @@ function App() {
 
     {/* <Eventdemoinfun></Eventdemoinfun> */}
 
-    <CounterApp/>
+    {/* <CounterApp/> */}
+
+    {/* <Statedemo/> */}
+    {/* <StateDemo2 username="Happy"/> */}
+    {/* <CSSStyles/> */}
+    <ListRendering/>
     </div>
   );
 }

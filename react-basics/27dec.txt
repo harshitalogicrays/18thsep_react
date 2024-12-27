@@ -1,0 +1,41 @@
+controlled component - react manages it 
+state -> 
+value and onChange handler 
+
+styles - 
+1. inline style - 
+
+<h1 style="color:orange;text-decoration:line-through"></h1>
+
+in react  - style is a prop and prop hold object
+style = { { color:"orange" , textDecoration:"line-through"} }
+
+2. css variable 
+
+3. css file -> .css 
+import 'path of css file '
+className=""
+
+All the children comp of the parent comp in which we have imported CSS can access that css even without importing it.
+
+4. css module file => .module.css  (only accessible in the comp where we have import it)
+import cssmodulename from 'path' 
+className={cssmodulename.classname}
+
+5. bootstrap
+6. react-bootstrap 
+7. styled-components 
+8. tailwindcss 
+
+=-====
+import Image1 from './assets/images/a.jpg'
+  <img src={Image1}/>
+===========================================================
+List Rendering  - 
+
+let arr = ["","","","","",""]
+
+Array of object -> table and card format 
+    key props with Fragment
+
+    react-bootstrap  

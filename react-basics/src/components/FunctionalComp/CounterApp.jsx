@@ -7,7 +7,7 @@ const CounterApp = () => {
         console.log(count)
     } */
 
-    let [count,setCount] = React.useState('')
+    let [count,setCount] = React.useState('') //hook react16
     let increase = ()=>{
         // setCount(parseInt(count++)) //count = count+1
         setCount((prevCount)=>parseInt(prevCount+1))
@@ -23,7 +23,7 @@ const CounterApp = () => {
     }
     let reset=()=>setCount('') //count=''
     let changeSign=()=>{
-        count!=0 && setCount((prevCount)=>-prevCount)
+        count!=0 && setCount((prevCount)=>-prevCount) //setCount(-count)
     } //count=12 , count=+-12 , count=--12
   return (
     <>

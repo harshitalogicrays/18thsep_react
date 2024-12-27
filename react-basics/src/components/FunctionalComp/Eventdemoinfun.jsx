@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Eventdemoinfun = () => {
-    let handleClick = ()=>{
+    function handleClick(){
         alert("handleClick called")
     }
     let handleAdd =(a,b)=>{alert(a+b)}
