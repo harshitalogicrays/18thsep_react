@@ -14,14 +14,17 @@ import './App.css';
 import cssmodule from './app.module.css'
 import ListRendering from './components/FunctionalComp/ListRendering';
 import Image1 from './assets/images/a.jpg'
+import ProductinTable from './components/FunctionalComp/ProductinTable';
+import AllProducts from './components/FunctionalComp/AllProducts';
+import ReactBootstrap from './components/FunctionalComp/ReactBootstrap';
 function App() {
   let name = "Happy"
 
   return (
     <div className="container">
-      <h1 className="success">Hello React</h1>
+      {/* <h1 className="success">Hello React</h1>
       <h2 className={cssmodule.error}>Welcome to LRA</h2>
-      <img src={Image1} style={{height:'200px',width:'200px'}}/>
+      <img src={Image1} style={{height:'200px',width:'200px'}}/> */}
       {/*
       <h2>Name = {name} </h2>
       <Firstfuncomp></Firstfuncomp>
@@ -47,7 +50,11 @@ function App() {
     {/* <Statedemo/> */}
     {/* <StateDemo2 username="Happy"/> */}
     {/* <CSSStyles/> */}
-    <ListRendering/>
+    {/* <ListRendering/> */}
+    {/* <ProductinTable/> */}
+
+    {/* <AllProducts/> */}
+    <ReactBootstrap/>
     </div>
   );
 }

@@ -1,0 +1,5 @@
+decluttering of components -
+
+key prop with Fragment 
+
+react-bootstrap - 
