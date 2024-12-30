@@ -1,0 +1,8 @@
+styled-components - 
+css related components- 
+<MyButton>Click Me</MyButton>
+
+<Button>Click </Button> => blue 
+
+form validation - React Hook Form (HTML Based)
+Routing 

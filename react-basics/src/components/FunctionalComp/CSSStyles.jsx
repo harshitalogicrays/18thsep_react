@@ -1,4 +1,5 @@
 import React from 'react'
+import { MyButton, TextBox } from './styledcompoents'
 // import cssmodule from '../../app.module.css'
 const CSSStyles = () => {
     let styles = {
@@ -16,6 +17,10 @@ const CSSStyles = () => {
         <h4 style={styles}>;jktlrjetje</h4>
         <div>3ljrlkjkhjtklehtkhekh</div>
         {/* <h2 className={cssmodule.error}>Welcome to LRA</h2> */}
+
+        <MyButton>Click Me</MyButton>
+
+        <TextBox type="date"></TextBox>
    </>
   )
 }

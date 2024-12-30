@@ -17,6 +17,9 @@ import Image1 from './assets/images/a.jpg'
 import ProductinTable from './components/FunctionalComp/ProductinTable';
 import AllProducts from './components/FunctionalComp/AllProducts';
 import ReactBootstrap from './components/FunctionalComp/ReactBootstrap';
+import Form1 from './components/FunctionalComp/Form1';
+import Form3 from './components/FunctionalComp/Form3';
+import { MyButton } from './components/FunctionalComp/styledcompoents';
 function App() {
   let name = "Happy"
 
@@ -54,7 +57,12 @@ function App() {
     {/* <ProductinTable/> */}
 
     {/* <AllProducts/> */}
-    <ReactBootstrap/>
+    {/* <ReactBootstrap/> */}
+    <Form1/>
+    {/* <Form3/> */}
+
+        {/* <CSSStyles/>
+        <MyButton>Submit</MyButton> */}
     </div>
   );
 }
