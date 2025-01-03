@@ -20,11 +20,15 @@ import ReactBootstrap from './components/FunctionalComp/ReactBootstrap';
 import Form1 from './components/FunctionalComp/Form1';
 import Form3 from './components/FunctionalComp/Form3';
 import { MyButton } from './components/FunctionalComp/styledcompoents';
+import Header from './components/Header';
 function App() {
   let name = "Happy"
 
   return (
-    <div className="container">
+    <>
+      <Header/>
+
+
       {/* <h1 className="success">Hello React</h1>
       <h2 className={cssmodule.error}>Welcome to LRA</h2>
       <img src={Image1} style={{height:'200px',width:'200px'}}/> */}
@@ -58,12 +62,16 @@ function App() {
 
     {/* <AllProducts/> */}
     {/* <ReactBootstrap/> */}
-    <Form1/>
+    {/* <Form1/> */}
     {/* <Form3/> */}
 
         {/* <CSSStyles/>
         <MyButton>Submit</MyButton> */}
-    </div>
+
+        {/* <Form3/> */}
+
+        
+    </>
   );
 }
 

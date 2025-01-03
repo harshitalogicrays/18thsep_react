@@ -1,0 +1,27 @@
+formik library 
+react hook form  - HTML based validation 
+required 
+maxlength
+minlength 
+min
+max 
+pattern 
+
+
+<input type="text" required minlength=5 maxlength=50 pattern=[a-zA-Z]+/>
+<input type="number" min=6 max=20 />
+
+  {...register('username' , {required : {value:true , message:"username is required"} ,
+                                minLength : {value:5,message:"min 5 char"}
+                             } )}
+                    
+  {...register('username' , {required : "username is required" ,
+                                minLength : {value:5,message:"min 5 char"}
+                             } )}
+
+==========================================================================
+
+Routing -  
+lifting the state up 
+
+
