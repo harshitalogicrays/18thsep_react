@@ -1,0 +1,19 @@
+
+Routing -  
+lifting the state up 
+
+http://localhost:4000/fun/state/aaa
+
+aaa => query parameter
+
+http://localhost:4000/fun/state?username=ram&email=ram@gmail.com
+ ?username=ram&email=ram@gmail.com => query string 
+
+ ======================================================================================
+ Lifting the state up - 
+
+ PArent  - > count state variable -> 1
+ children  -> button 
+
+ controlled component - state and onChange 
+ uncontrolled component

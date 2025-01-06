@@ -21,13 +21,17 @@ import Form1 from './components/FunctionalComp/Form1';
 import Form3 from './components/FunctionalComp/Form3';
 import { MyButton } from './components/FunctionalComp/styledcompoents';
 import Header from './components/Header';
+import { Outlet } from 'react-router';
+import { Container } from 'react-bootstrap';
 function App() {
   let name = "Happy"
 
   return (
     <>
       <Header/>
-
+      <Container className='mt-5'>
+          <Outlet/>
+      </Container>
 
       {/* <h1 className="success">Hello React</h1>
       <h2 className={cssmodule.error}>Welcome to LRA</h2>

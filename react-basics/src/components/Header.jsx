@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,7 +7,20 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Button, InputGroup } from 'react-bootstrap';
+import { NavLink } from 'react-router';
 const Header = () => {
+  let funlinks = [
+    {id:1,url:'/fun/first', text:"Function First Comp"},
+    {id:2,url:'/fun/props', text:"Function props Demo"},
+    {id:3,url:'/fun/state', text:"Function state demo"},
+    {id:4,url:'/fun/counter', text:"Function counter app"},
+    {id:5,url:'/fun/products', text:"Products"},
+    {id:6,url:'/fun/list', text:"Function List Rendering Comp"},
+    {id:7,url:'/fun/form/validations/regular', text:"Function Form validations"},
+    {id:8,url:'/fun/form/validations/rhf', text:"React Hook Form "},
+    {id:9,url:'/fun/lifting', text:"Lifting the state up"},
+  ]
+
   return (
     <>
     <Navbar expand="lg"  bg="dark" data-bs-theme="dark">
@@ -16,19 +29,42 @@ const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
+          <Nav.Link as={NavLink}  to="/"  
+           style={({ isActive }) => ({
+            color: isActive ? "red" : "",
+            backgroundColor:isActive?"yellow":'',
+            fontWeight: isActive ? "bold":""
+          })}>Home</Nav.Link>
+          <Nav.Link as={NavLink} to="/about" 
+           style={({ isActive }) => ({
+            color: isActive ? "red" : "",
+            backgroundColor:isActive?"yellow":'',
+            fontWeight: isActive ? "bold":""
+          })}
+          >About</Nav.Link>
+          <NavDropdown title="Funtional Components" id="basic-nav-dropdown">
+            {funlinks.map((link,index)=> 
+            <Fragment key={link.id}>
+                <NavDropdown.Item as={NavLink} to={link.url}
+                style={({ isActive }) => ({
+                  color: isActive ? "red" : "",
+                  backgroundColor:isActive?"yellow":'',
+                  fontWeight: isActive ? "bold":""
+                })}
+                >{link.text}</NavDropdown.Item>
+                {index != funlinks.length-1 &&     <NavDropdown.Divider />}
+            
+            </Fragment>
+            )}
           </NavDropdown>
+
+          <Nav.Link as={NavLink} to="/class/first" 
+           style={({ isActive }) => ({
+            color: isActive ? "red" : "",
+            backgroundColor:isActive?"yellow":'',
+            fontWeight: isActive ? "bold":""
+          })}
+          >Class Component</Nav.Link>
         </Nav>
         <Form inline>
             <InputGroup>

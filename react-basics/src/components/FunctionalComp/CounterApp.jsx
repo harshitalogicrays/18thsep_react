@@ -28,11 +28,11 @@ const CounterApp = () => {
   return (
     <>
       <h1>Counter App</h1>
-      <button type="button" className="btn btn-primary me-2" onClick={increase}> Increase </button>  
+        <button type="button" className="btn btn-primary me-2" onClick={increase}> Increase </button>  
       <button type="button" className="btn btn-primary me-2" onClick={decrease}> Decrease </button>  
       <button type="button" className="btn btn-primary me-2" onClick={reset}> Reset </button>  
       <button type="button" className="btn btn-primary me-2" onClick={changeSign}> Change Sign </button>  
-      <h1>count: {count}</h1>
+    <h1>count: {count}</h1>
     </>
   )
 }
