@@ -1,0 +1,33 @@
+ Lifting the state up - 
+
+ Parent  - > count state variable -> 1
+ children  -> button 
+
+
+===================================================
+Form -
+ 1. controlled component - react manages it using  state and onChange 
+ state and setState() - class 
+ useState() hoook 
+
+    state is variable -> we can initalize it 
+
+ 2. uncontrolled component - react does not manages it. DOM itself manages it 
+ createRef() - class 
+useRef() hook
+ref means reference and we can not initalize it 
+ref returns a current property 
+
+functional component - load event -> useEffect() hook => useEffect(()=>{},[])
+                        change event -> useEffect() hook  => => useEffect(()=>{},[countstate])
+
+React.useEffect(()=>{},[dependency array])
+
+import {useEffect} from 'react'
+useEffect(()=>{},[dependency array])
+
+===================================================================================
+useCallback hook  -> useEffect and useRef
+useMemo hook 
+=================================
+class component 

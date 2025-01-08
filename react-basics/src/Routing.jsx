@@ -14,6 +14,7 @@ import ProductinTable from './components/FunctionalComp/ProductinTable';
 import Form3 from './components/FunctionalComp/Form3';
 import Form1 from './components/FunctionalComp/Form1';
 import Lfitingthestateup from './components/FunctionalComp/Lfitingthestateup';
+import Uncontrolled from './components/FunctionalComp/Uncontrolled';
 const Routing = () => {
   return (
     <Routes>
@@ -29,7 +30,7 @@ const Routing = () => {
             <Route path="fun/form/validations/regular" element={<Form1/>}></Route>
             <Route path="fun/form/validations/rhf" element={<Form3/>}></Route>
             <Route path="fun/lifting" element={<Lfitingthestateup/>}></Route>
-
+            <Route path="fun/uncontrolled" element={<Uncontrolled/>}></Route>
 
             <Route path="class/first" element={<Firstclasscomp/>}></Route>
         </Route>
