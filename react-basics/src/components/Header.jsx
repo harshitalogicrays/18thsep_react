@@ -16,10 +16,12 @@ const Header = () => {
     {id:4,url:'/fun/counter', text:"Function counter app"},
     {id:5,url:'/fun/products', text:"Products"},
     {id:6,url:'/fun/list', text:"Function List Rendering Comp"},
-    {id:7,url:'/fun/form/validations/regular', text:"Function Form validations"},
+    {id:7,url:'/fun/form/validations', text:"Function Form validations"},
     {id:8,url:'/fun/form/validations/rhf', text:"React Hook Form "},
     {id:9,url:'/fun/lifting', text:"Lifting the state up"},
     {id:10,url:'/fun/uncontrolled', text:"uncontrolled component"},
+    {id:11,url:'/fun/usecallback', text:"usCallback, useEffect, useRef"},
+    {id:12,url:'/fun/usememo', text:"useMemo Hook"},
   ]
 
   return (
@@ -51,7 +53,7 @@ const Header = () => {
                   color: isActive ? "red" : "",
                   backgroundColor:isActive?"yellow":'',
                   fontWeight: isActive ? "bold":""
-                })}
+                })} end
                 >{link.text}</NavDropdown.Item>
                 {index != funlinks.length-1 &&     <NavDropdown.Divider />}
             

@@ -15,6 +15,8 @@ import Form3 from './components/FunctionalComp/Form3';
 import Form1 from './components/FunctionalComp/Form1';
 import Lfitingthestateup from './components/FunctionalComp/Lfitingthestateup';
 import Uncontrolled from './components/FunctionalComp/Uncontrolled';
+import UseCallbackDemo from './components/FunctionalComp/UseCallbackDemo';
+import USeMemoDemo from './components/FunctionalComp/USeMemoDemo';
 const Routing = () => {
   return (
     <Routes>
@@ -27,10 +29,12 @@ const Routing = () => {
             <Route path="fun/counter" element={<CounterApp/>}></Route>
             <Route path="fun/products" element={<AllProducts/>}></Route>
             <Route path="fun/list" element={<ProductinTable/>}></Route>
-            <Route path="fun/form/validations/regular" element={<Form1/>}></Route>
+            <Route path="fun/form/validations" element={<Form1/>}></Route>
             <Route path="fun/form/validations/rhf" element={<Form3/>}></Route>
             <Route path="fun/lifting" element={<Lfitingthestateup/>}></Route>
             <Route path="fun/uncontrolled" element={<Uncontrolled/>}></Route>
+            <Route path="fun/usecallback" element={<UseCallbackDemo/>}></Route>
+            <Route path="fun/usememo" element={<USeMemoDemo/>}></Route>
 
             <Route path="class/first" element={<Firstclasscomp/>}></Route>
         </Route>

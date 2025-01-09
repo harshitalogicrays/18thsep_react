@@ -1,0 +1,35 @@
+===================================================================================
+useCallback hook  -> useEffect and useRef
+useMemo hook 
+useState 
+
+useContext 
+useImperativeHandle
+useTransition 
+useActionState
+useDebugValue 
+useDeferedValue 
+useId  
+
+============================================================
+storage unit -
+1.primary  - RAM 
+2. seconday 
+
+seconday ----  cache memory ---> RAM (space ) 
+
+useCallback hook => useCallback is a React Hook that lets you cache a function definition between re-renders.
+const cachedFn = useCallback(fn, dependencies)
+
+useMemo hook -> useMemo is a React Hook that lets you cache the result of a calculation between re-renders. 
+const cachedValue = useMemo(calculateValue, dependencies)
+
+=======================================================================================
+class component -
+props 
+state , form design
+event 
+
+Class component Life Cycle Methods 
+pure component 
+HOC - Higher Order component  
