@@ -1,0 +1,12 @@
+useImperativeHandle -  
+
+lifting the state up -> 
+parent state ---> child 
+    statechange as a prop 
+
+child ----> parent 
+
+useImperativeHandle - allow parent to access specific methods or properties of child component through a ref without exposing the entire child component's implementation details.
+
+
+

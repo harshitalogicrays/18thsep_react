@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <Header/>
-      <Container className='mt-5'>
+      <Container fluid className='mt-5'>
           <Outlet/>
       </Container>
 

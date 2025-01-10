@@ -17,6 +17,17 @@ import Lfitingthestateup from './components/FunctionalComp/Lfitingthestateup';
 import Uncontrolled from './components/FunctionalComp/Uncontrolled';
 import UseCallbackDemo from './components/FunctionalComp/UseCallbackDemo';
 import USeMemoDemo from './components/FunctionalComp/USeMemoDemo';
+import USeImperativeHandleDemoParent from './components/FunctionalComp/USeImperativeHandleDemoParent';
+import UseTransitionDemo from './components/FunctionalComp/useTransition';
+import HooksDemo from './components/FunctionalComp/HooksDemo';
+import ClassCompLayout from './components/ClassComp/ClassCompLayout';
+import Propsinclass from './components/ClassComp/Propsinclass';
+import StateandEvent from './components/ClassComp/StateandEvent';
+import ForminClass from './components/ClassComp/ForminClass';
+import FormValidations from './components/ClassComp/FormValidations';
+import Refdemoinclass from './components/ClassComp/Refdemoinclass';
+import LifeCycleMethods from './components/ClassComp/LifeCycleMethods';
+import PureCompDemo from './components/ClassComp/PureCompDemo';
 const Routing = () => {
   return (
     <Routes>
@@ -24,19 +35,38 @@ const Routing = () => {
             <Route path='' element={<Home/>}/>
             <Route path='about' element={<About/>}></Route>
             <Route path="fun/first" element={<Firstfuncomp/>}></Route>
-            <Route path="fun/props" element={<Propsdemoinfun/>}></Route>
-            <Route path="fun/state" element={<Statedemo/>}></Route>
-            <Route path="fun/counter" element={<CounterApp/>}></Route>
+            <Route path="fun/props" element={<Propsdemoinfun/>}></Route>     
             <Route path="fun/products" element={<AllProducts/>}></Route>
             <Route path="fun/list" element={<ProductinTable/>}></Route>
             <Route path="fun/form/validations" element={<Form1/>}></Route>
             <Route path="fun/form/validations/rhf" element={<Form3/>}></Route>
             <Route path="fun/lifting" element={<Lfitingthestateup/>}></Route>
             <Route path="fun/uncontrolled" element={<Uncontrolled/>}></Route>
-            <Route path="fun/usecallback" element={<UseCallbackDemo/>}></Route>
-            <Route path="fun/usememo" element={<USeMemoDemo/>}></Route>
+            <Route path="fun/hooks" element = {<HooksDemo/>}>
+                <Route path="" element={<Statedemo/>}></Route>
+                <Route path="state" element={<Statedemo/>}></Route>
+                <Route path="counter" element={<CounterApp/>}></Route>
+                <Route path="usecallback" element={<UseCallbackDemo/>}></Route>
+                <Route path="usememo" element={<USeMemoDemo/>}></Route>
+                <Route path="useimperativehandle" element={<USeImperativeHandleDemoParent/>}></Route>
+                <Route path="usetransition" element={<UseTransitionDemo/>}></Route>
+            </Route>
+           
 
-            <Route path="class/first" element={<Firstclasscomp/>}></Route>
+            <Route path="class" element={<ClassCompLayout/>}>
+              <Route path="" element={<Firstclasscomp/>}/>
+              <Route path="props" element={
+                <Propsinclass username="LRA" isActive={false}>
+                    <h3>children</h3>
+                    <Firstclasscomp></Firstclasscomp>
+              </Propsinclass>}/>
+              <Route path="stateandevent" element={<StateandEvent/>}/>
+              <Route path="form" element={<ForminClass/>}/>
+              <Route path="form/validations" element={<FormValidations/>}/>
+              <Route path="ref" element={<Refdemoinclass/>}/>
+              <Route path="lifecycle" element={<LifeCycleMethods/>}/>
+              <Route path="pure" element={<PureCompDemo/>}/>
+            </Route>
         </Route>
         
 
