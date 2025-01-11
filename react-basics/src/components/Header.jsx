@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Button, InputGroup } from 'react-bootstrap';
-import { NavLink } from 'react-router';
+import { NavLink, Outlet } from 'react-router';
 const Header = () => {
   let funlinks = [
     {id:1,url:'/fun/first', text:"Function First Comp"},
@@ -58,7 +58,7 @@ const Header = () => {
             )}
           </NavDropdown>
 
-          <Nav.Link as={NavLink} to="/class/first" 
+          <Nav.Link as={NavLink} to="/class" 
            style={({ isActive }) => ({
             color: isActive ? "red" : "",
             backgroundColor:isActive?"yellow":'',
@@ -73,13 +73,27 @@ const Header = () => {
             </InputGroup>
       </Form>
         <Nav  className="ms-auto">
-          <Nav.Link href="#home">Register</Nav.Link>
-          <Nav.Link href="#link">Login</Nav.Link>
+        <Nav.Link as={NavLink} to="/register" 
+           style={({ isActive }) => ({
+            color: isActive ? "red" : "",
+            backgroundColor:isActive?"yellow":'',
+            fontWeight: isActive ? "bold":""
+          })}
+          >Register</Nav.Link>
+        <Nav.Link as={NavLink} to="/login" 
+           style={({ isActive }) => ({
+            color: isActive ? "red" : "",
+            backgroundColor:isActive?"yellow":'',
+            fontWeight: isActive ? "bold":""
+          })}
+          >Login</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
    </Navbar>
-
+   <Container fluid className='mt-3'>
+          <Outlet/>
+          </Container>
 
 {/* <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">

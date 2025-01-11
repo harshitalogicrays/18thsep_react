@@ -1,0 +1,6 @@
+20thjan - 
+
+state validations
+ref - createRef()
+lifecycle methods 
+ 

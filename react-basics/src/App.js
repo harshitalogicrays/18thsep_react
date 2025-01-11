@@ -28,10 +28,8 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Container fluid className='mt-5'>
+      {/* <Header/> */}
           <Outlet/>
-      </Container>
 
       {/* <h1 className="success">Hello React</h1>
       <h2 className={cssmodule.error}>Welcome to LRA</h2>

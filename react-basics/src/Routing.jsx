@@ -28,11 +28,15 @@ import FormValidations from './components/ClassComp/FormValidations';
 import Refdemoinclass from './components/ClassComp/Refdemoinclass';
 import LifeCycleMethods from './components/ClassComp/LifeCycleMethods';
 import PureCompDemo from './components/ClassComp/PureCompDemo';
+import Register from './components/FunctionalComp/Register';
+import Login from './components/FunctionalComp/Login';
+import Header from './components/Header';
 const Routing = () => {
   return (
     <Routes>
         <Route path='/' element={<App/>}>
-            <Route path='' element={<Home/>}/>
+        <Route element={<Header/>}>
+        <Route index element={<Home/>}/>
             <Route path='about' element={<About/>}></Route>
             <Route path="fun/first" element={<Firstfuncomp/>}></Route>
             <Route path="fun/props" element={<Propsdemoinfun/>}></Route>     
@@ -43,7 +47,7 @@ const Routing = () => {
             <Route path="fun/lifting" element={<Lfitingthestateup/>}></Route>
             <Route path="fun/uncontrolled" element={<Uncontrolled/>}></Route>
             <Route path="fun/hooks" element = {<HooksDemo/>}>
-                <Route path="" element={<Statedemo/>}></Route>
+                <Route index element={<Statedemo/>}></Route>
                 <Route path="state" element={<Statedemo/>}></Route>
                 <Route path="counter" element={<CounterApp/>}></Route>
                 <Route path="usecallback" element={<UseCallbackDemo/>}></Route>
@@ -51,12 +55,11 @@ const Routing = () => {
                 <Route path="useimperativehandle" element={<USeImperativeHandleDemoParent/>}></Route>
                 <Route path="usetransition" element={<UseTransitionDemo/>}></Route>
             </Route>
-           
 
             <Route path="class" element={<ClassCompLayout/>}>
-              <Route path="" element={<Firstclasscomp/>}/>
+              <Route index element={<Firstclasscomp/>}/>
               <Route path="props" element={
-                <Propsinclass username="LRA" isActive={false}>
+                <Propsinclass username={123} isActive={false}>
                     <h3>children</h3>
                     <Firstclasscomp></Firstclasscomp>
               </Propsinclass>}/>
@@ -67,6 +70,10 @@ const Routing = () => {
               <Route path="lifecycle" element={<LifeCycleMethods/>}/>
               <Route path="pure" element={<PureCompDemo/>}/>
             </Route>
+        </Route>
+            
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/login" element={<Login/>}/>
         </Route>
         
 
