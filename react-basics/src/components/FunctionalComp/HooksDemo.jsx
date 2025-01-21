@@ -10,7 +10,9 @@ const HooksDemo = () => {
         {url:"/fun/hooks/usememo",text:"useMemo Hook"},
         {url:"/fun/hooks/useimperativehandle",text:"useimperativehandle Hook"},
         {url:"/fun/hooks/usetransition",text:"usetransition hook"},
+        {url:"/fun/hooks/useeffect",text:"useEffect clean up hook"},
         {url:"/fun/hooks/useContext",text:"useContext hook"}
+      
     ]
   return (
     <Row>

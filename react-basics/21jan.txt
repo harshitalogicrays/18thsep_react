@@ -1,0 +1,20 @@
+class component life cycle methods - 
+1. mounting phase  (load)
+2. updating phase  (state change)
+3. unmounting phase  (unload)
+4. error boundary 
+
+useEffect(()=>{},[]) - mount 
+useEffect(()=>{},[state]) - update 
+
+useEffect(()=>{  
+    return ()=>{}  //cleanup code 
+},[]) - unmount
+
+============================================
+Error Boundary 
+
+HOC - higher order component (API calling )
+
+useContext hook 
+custom hook 

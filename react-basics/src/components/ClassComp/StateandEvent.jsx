@@ -7,7 +7,8 @@ export default class StateandEvent extends Component {
     this.state = {count:1,num1:'',num2:'',result:0}
   }
   handleCounter=()=>{
-     this.setState({ count: this.state.count + 1 });
+    //  this.setState({ count: this.state.count + 1 });
+     this.setState((prevState)=> ({count: prevState.count + 1}) )
   }
   
   handleClick(){ alert("handleClick called")}

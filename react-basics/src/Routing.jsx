@@ -31,6 +31,7 @@ import PureCompDemo from './components/ClassComp/PureCompDemo';
 import Register from './components/FunctionalComp/Register';
 import Login from './components/FunctionalComp/Login';
 import Header from './components/Header';
+import Useeffectcleanup from './components/FunctionalComp/Useeffectcleanup';
 const Routing = () => {
   return (
     <Routes>
@@ -54,6 +55,7 @@ const Routing = () => {
                 <Route path="usememo" element={<USeMemoDemo/>}></Route>
                 <Route path="useimperativehandle" element={<USeImperativeHandleDemoParent/>}></Route>
                 <Route path="usetransition" element={<UseTransitionDemo/>}></Route>
+                <Route path="useeffect" element={<Useeffectcleanup/>}></Route>
             </Route>
 
             <Route path="class" element={<ClassCompLayout/>}>

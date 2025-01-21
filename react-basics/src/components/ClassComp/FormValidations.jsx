@@ -6,7 +6,7 @@ export default class FormValidations extends Component {
     this.state = {
        title:"Form validations Demo",
        user:{username:'',email:'',password:'',cpassword:''},
-       errors:{username:'',email:'',password:'',cpassword:''}
+       errors:{}
     }
   }
   handleChange=(e)=>{
@@ -17,28 +17,30 @@ export default class FormValidations extends Component {
 
   checkUsername =()=>{
     if(this.state.user.username==''){
-      this.setState({
-        errors : ({...this.state.errors , username:"username is required"})
-   });
+      this.setState((prevState)=>({errors :{...prevState.errors,username :"username is required"} }))
         return false
     }
+    else if(!/^[a-zA-Z]+$/.test(this.state.user.username)){
+      this.setState((prevState)=>({errors :{...prevState.errors,username :"alphabets only"} }))
+      return false
+    }
     else {
-      this.setState({
-        errors : ({...this.state.errors , username:""})
-   });;return true
+      this.setState(prevState => ({
+        errors: { ...prevState.errors, username: "" }
+      }));return true
     }
 }
 
 checkemail =()=>{
     if(this.state.user.email==''){
-      this.setState({
-        errors : ({...this.state.errors , email:"email is required"})
-   });return false;
+      this.setState(prevState => ({
+        errors: { ...prevState.errors, email: "email is required" }
+      }));return false;
     }
     else {
-      this.setState({
-        errors : ({...this.state.errors , email:""})
-   });return true
+      this.setState(prevState => ({
+        errors: { ...prevState.errors, email: "" }
+      }));return true
     }
 }
 
