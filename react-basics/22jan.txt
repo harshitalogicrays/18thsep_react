@@ -1,0 +1,35 @@
+Error Boundary -
+
+API  - Application Programming interface 
+
+Frontend ---> Backend ---> DB 
+            nodejs-----> mongoDB
+             get/fetch 
+             post /submit 
+             put or patch / update
+             delete  
+
+http://gmail.com/users/login => API end point
+
+GET - products amazon 
+POST - register or login amazon
+put - cart -> update quantity of product 
+delete - cart - product remove 
+
+HOC - higher order component (API calling )
+
+Fake API -> JSON Server 
+
+fetch API - javascript Provides it -> by default return promise 
+
+axios -> npm i axios
+
+fetch("url").then(()=>{}).catch(()=>{})
+
+=======================
+A higher-order component (HOC) is an advanced technique in React for reusing component logic.
+
+A higher-order component is a function that takes a component and returns a new component.
+
+useContext 
+custom hook 

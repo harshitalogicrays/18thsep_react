@@ -11,6 +11,9 @@ export default class ClassNavbar extends Component {
         {url:"/class/ref",text:"ref Class Comp"},
         {url:"/class/lifecycle",text:"life cycle Class Comp"},
         {url:"/class/pure",text:"pure Class Comp"},
+        {url:"/class/error",text:"Error Boundary"},
+        {url:"/class/hoc",text:"Higher Order Component"},
+
     ]
   render() {
     return (

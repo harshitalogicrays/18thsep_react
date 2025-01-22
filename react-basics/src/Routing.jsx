@@ -32,6 +32,8 @@ import Register from './components/FunctionalComp/Register';
 import Login from './components/FunctionalComp/Login';
 import Header from './components/Header';
 import Useeffectcleanup from './components/FunctionalComp/Useeffectcleanup';
+import ErrorDemo from './components/FunctionalComp/ErrorDemo';
+import HOCDemo from './components/ClassComp/HOCDemo';
 const Routing = () => {
   return (
     <Routes>
@@ -71,6 +73,8 @@ const Routing = () => {
               <Route path="ref" element={<Refdemoinclass/>}/>
               <Route path="lifecycle" element={<LifeCycleMethods/>}/>
               <Route path="pure" element={<PureCompDemo/>}/>
+              <Route path="error" element={<ErrorDemo/>}/>
+              <Route path="hoc" element={<HOCDemo/>}/>
             </Route>
         </Route>
             
