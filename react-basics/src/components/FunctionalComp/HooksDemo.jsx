@@ -11,7 +11,8 @@ const HooksDemo = () => {
         {url:"/fun/hooks/useimperativehandle",text:"useimperativehandle Hook"},
         {url:"/fun/hooks/usetransition",text:"usetransition hook"},
         {url:"/fun/hooks/useeffect",text:"useEffect clean up hook"},
-        {url:"/fun/hooks/useContext",text:"useContext hook"}
+        {url:"/fun/hooks/useContext",text:"useContext hook"},
+        {url:"/fun/hooks/customhook",text:"Custom hook"}
       
     ]
   return (

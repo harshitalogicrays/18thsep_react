@@ -1,0 +1,36 @@
+Hooks 
+useContext  - 
+2 demo 
+
+custom hook -
+
+vite tool 
+
+<App> - root 
+        <Header> -- home,about,products 
+        <login>
+
+
+<Route path='/' element={<App/>}>
+    <Route element={<Header/>}>
+        <Route index element={<Home/>}/>
+        <Route path='about' element={<About/>}/>
+        <Route path='products' element={<Products/>}/>
+    </Route>
+    <Route path='login' element={<Login/>}/>
+    <Route path='register' element={<Register/>}/>
+
+</Route>
+
+App => Outlet =>[header,login,register]
+        header -> Outlet => [home,about,products]
+
+create our own hook (function) - 
+hook - never return jsx 
+      is a normal js function (string,obj,array,function,promise etc...)
+      we can use other hook as well 
+      useState, useEffect etc...
+
+    =================================================
+custom hook - API 
+             new project - vite tool + tailwindcss 

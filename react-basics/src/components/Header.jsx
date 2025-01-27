@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Button, InputGroup } from 'react-bootstrap';
 import { NavLink, Outlet } from 'react-router';
+import ThemeBtn from './FunctionalComp/ThemeBtn';
 const Header = () => {
   let funlinks = [
     {id:1,url:'/fun/first', text:"Function First Comp"},
@@ -66,13 +67,17 @@ const Header = () => {
           })}
           >Class Component</Nav.Link>
         </Nav>
+
+        <ThemeBtn/>
+        
         <Form inline>
             <InputGroup>
             <Form.Control  type="text"  placeholder="Search"   />         
             <Button type="submit" variant='danger'><i className='bi bi-search'></i></Button>
             </InputGroup>
       </Form>
-        <Nav  className="ms-auto">
+    
+        <Nav  >
         <Nav.Link as={NavLink} to="/register" 
            style={({ isActive }) => ({
             color: isActive ? "red" : "",

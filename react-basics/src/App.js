@@ -23,13 +23,16 @@ import { MyButton } from './components/FunctionalComp/styledcompoents';
 import Header from './components/Header';
 import { Outlet } from 'react-router';
 import { Container } from 'react-bootstrap';
+import ThemeContext from './components/FunctionalComp/ThemeContext';
 function App() {
   let name = "Happy"
 
   return (
     <>
       {/* <Header/> */}
+      <ThemeContext>
           <Outlet/>
+      </ThemeContext>
 
       {/* <h1 className="success">Hello React</h1>
       <h2 className={cssmodule.error}>Welcome to LRA</h2>

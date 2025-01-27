@@ -34,12 +34,15 @@ import Header from './components/Header';
 import Useeffectcleanup from './components/FunctionalComp/Useeffectcleanup';
 import ErrorDemo from './components/FunctionalComp/ErrorDemo';
 import HOCDemo from './components/ClassComp/HOCDemo';
+import MyContext from './components/MyContext';
+import UseContextDemo from './components/FunctionalComp/UseContextDemo';
+import CustomHook from './components/FunctionalComp/CustomHook';
 const Routing = () => {
   return (
     <Routes>
         <Route path='/' element={<App/>}>
-        <Route element={<Header/>}>
-        <Route index element={<Home/>}/>
+        <Route element={<MyContext><Header/></MyContext>}>
+            <Route index element={<Home/>}/>
             <Route path='about' element={<About/>}></Route>
             <Route path="fun/first" element={<Firstfuncomp/>}></Route>
             <Route path="fun/props" element={<Propsdemoinfun/>}></Route>     
@@ -58,6 +61,9 @@ const Routing = () => {
                 <Route path="useimperativehandle" element={<USeImperativeHandleDemoParent/>}></Route>
                 <Route path="usetransition" element={<UseTransitionDemo/>}></Route>
                 <Route path="useeffect" element={<Useeffectcleanup/>}></Route>
+                <Route path="usecontext" element={<UseContextDemo/>}></Route>
+                <Route path="customhook" element={<CustomHook/>}></Route>
+
             </Route>
 
             <Route path="class" element={<ClassCompLayout/>}>
@@ -76,13 +82,11 @@ const Routing = () => {
               <Route path="error" element={<ErrorDemo/>}/>
               <Route path="hoc" element={<HOCDemo/>}/>
             </Route>
+        </Route>  
         </Route>
-            
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/login" element={<Login/>}/>
-        </Route>
-        
-
+  
+      <Route path="/register" element={<Register/>}/>
+       <Route path="/login" element={<Login/>}/>
 
         {/* <Route path='/funprops' element={<Propsdemoinfun/>}></Route>
         <Route path='/class/first' element={<Firstclasscomp/>}></Route>
