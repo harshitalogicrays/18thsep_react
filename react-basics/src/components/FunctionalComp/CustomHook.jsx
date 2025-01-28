@@ -1,8 +1,10 @@
 import React from 'react'
 import useToggle from './useToggle'
-
+import useFetchAPIData from './useFetchAPIData'
 const CustomHook = () => {
   let [toggle,toogleData] = useToggle()
+  let data = useFetchAPIData("https://jsonplaceholder.typicode.com/users")
+  // console.log(data)
   // console.log(toogle,toogleData)
   return (
    <>

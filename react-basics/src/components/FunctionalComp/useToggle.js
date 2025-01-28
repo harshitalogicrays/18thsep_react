@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 
 const useToggle = () => {
     let [toggle,setToggle] =useState(true)
@@ -7,6 +8,7 @@ const useToggle = () => {
             setToggle(!toggle)
         else 
             setToggle(val)
+        toast.success("toogle done")
     }
   return ([toggle,toogleData])
 }

@@ -1,0 +1,21 @@
+vite tool - HMR 
+
+npm create vite@latest 
+
+"start":"vite --port 3000"
+
+bootstrap -  
+ready component - table , card , model, navbar etc...
+d-inline 
+
+tailwindcss -  utility first css framework 
+
+
+npm i react-router react-toastify react-icons axios @headlessui/react
+
+=======
+10:00AM 
+navbar 
+form 
+products 
+api data post -> 

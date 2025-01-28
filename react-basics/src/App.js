@@ -24,11 +24,24 @@ import Header from './components/Header';
 import { Outlet } from 'react-router';
 import { Container } from 'react-bootstrap';
 import ThemeContext from './components/FunctionalComp/ThemeContext';
+import { ToastContainer } from 'react-toastify';
 function App() {
   let name = "Happy"
 
   return (
     <>
+    <ToastContainer position="bottom-left"
+                    autoClose={2000}
+                    hideProgressBar
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss={false}
+                    draggable={false}
+                    pauseOnHover={false}
+                    theme="colored"
+                   />
+
       {/* <Header/> */}
       <ThemeContext>
           <Outlet/>
