@@ -1,24 +1,19 @@
 import React from 'react'
-import { Outlet } from 'react-router'
+import { NavLink, Outlet } from 'react-router'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { HiBars3 , HiBell , HiXMark } from 'react-icons/hi2'
+import { HiBars3 , HiBell , HiMagnifyingGlass, HiShoppingCart, HiXMark } from 'react-icons/hi2'
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'about', href: '/about', current: false },
-  { name: 'Products', href: '/products', current: false },
+  { name: 'Home', href: '/' },
+  { name: 'about', href: '/about'},
+  { name: 'Products', href: '/products'},
  ]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 
 const Header = () => {
   return (
     <>
-       <Disclosure as="nav" className="bg-gray-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+       <Disclosure as="nav" className="bg-gray-600">
+      <div className="max-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -31,38 +26,48 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+             <span className='text-white'>TailwindProject</span>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
-                    )}
+                    to={item.href}
+                    className = {({isActive})=>isActive ?'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </div>
           </div>
+
+
+         
+
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="relative hidden sm:block sm:me-2"> 
+          <input
+            type="text"
+            placeholder="Search..."
+            className="bg-gray-700 text-white rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+          />
+          <HiMagnifyingGlass className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
+        </div>
+
+          <div className='hidden sm:block sm:me-2'>
+            <NavLink to='/register' className = {({isActive})=>isActive ?'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}>Register</NavLink>
+            <NavLink to='/login' className = {({isActive})=>isActive ?'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' :'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}>Login</NavLink>
+          </div>
+           
             <button
               type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+              className="relative me-2 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
             >
               <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <HiBell aria-hidden="true" className="size-6" />
+              <HiShoppingCart aria-hidden="true" className="size-8" />
+              <span className='absolute bg-red-600 text-white px-2 rounded-full -top-1 -right-4'>0</span>
             </button>
 
             {/* Profile dropdown */}
@@ -115,19 +120,24 @@ const Header = () => {
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
           {navigation.map((item) => (
-            <DisclosureButton
+            <NavLink
               key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
+              to={item.href}
+              className={({isActive})=>isActive? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium": "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}
             >
               {item.name}
-            </DisclosureButton>
+            </NavLink>
           ))}
+             <NavLink to='/register'  className={({isActive})=>isActive? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium": "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}>Register</NavLink>
+             <NavLink to='/login'   className={({isActive})=>isActive? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium": "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}>Login</NavLink>
+             <div className="relative"> 
+              <input
+                type="text"
+                placeholder="Search..."
+                className="bg-gray-700 text-white rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              <HiMagnifyingGlass className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" />
+            </div>
         </div>
       </DisclosurePanel>
       </Disclosure>

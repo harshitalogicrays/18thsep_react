@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "03f3",
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "cpassword": "admin123",
+      "role": "1",
+      "createdAt": "2025-01-29T06:05:58.531Z"
+    }
+  ],
+  "products": [],
+  "orders": []
+}

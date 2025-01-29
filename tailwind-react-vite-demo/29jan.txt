@@ -1,0 +1,3 @@
+local json server 
+
+npx json-server data.json --port 1000
